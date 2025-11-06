@@ -58,6 +58,7 @@ header .navbar-list{
 }
 
 .navbar-list .navbar-links:hover{
+    padding: 5px 10px;
     text-decoration: underline #00358f;
     background-color: #f0f0f0;
     box-shadow: 1px 1px  1px #656565, -1px -1px 1px #656565;
@@ -247,115 +248,46 @@ hr{
     cursor: pointer;
 }
 
-/*=============================================
-            RESPONSIVE CODES
-=============================================*/
-
-@media (max-width:69em){
-
-    .search-icon,.world-icon{
-        display: none;
-    }
-
-    .header{
-        display: flex;
-        justify-content: space-between;
-        padding-top: 0;
-    }
-
-    header .kpmg-logo{
-        height: 39px;
-        min-width: auto;
-        margin-top: 0.4rem;
-    }
-
-    .mob-tab-navbar{
-        display: block;
-        padding: 0.6rem 0 0 1.17rem;
-        font-size: 1.7rem;
-        z-index: 999;
-    }
-
-    .navbar{
-        display: flex;
-        justify-content: left;
-        align-items:center;
-        width: 100%;
-        height: 100vh;
-        background: #fff;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-
-        /* to get transformation animation  */
-
-        transform:translateY(-100%);
-        transition:all 0.5s linear;
-    }
-    
-    .navbar-list{
-        flex-direction: column;
-        padding-left: 20px;
-    }
-
-    .navbar-links{
-        font-size: 1.5rem;
-        font-weight: 500;
-    }
-
-    header .link-icon-container{
-        font-size: 2rem;
-        padding: 0.5rem 2.8rem 0 0;
-    }
-
-    .active .navbar{
-        transform:translate(0);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
-
-    .active .mob-tab-navbar .mob-tab-can-icon{
-        display: block;
-    }
-
-    .active .mob-tab-navbar .mob-tab-nav-icon{
-        display: none;
-    }
-    
-}
-
+/* MAIN BANNER  */
 
 .corousel-section{
+    width: 100%;
     display: flex;
-    background-image: url(./src/images/home\ banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh;
+    height: 92vh;
+    background-color: #4386f9;
+    position: relative;
+}
+
+.main-banner-video {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
 }
 
 .corousel-msg-btn{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
     margin-left: 20px;
-    justify-content: center; 
     color: #fff;
+    position: absolute;
+    z-index: 10;
+    width: 45%;
+    top: 15%;
+    left: 10%;
 }
 
 .corousel-msg-btn h1{
     font-family: 'Asap Condensed', sans-serif;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 .corousel-msg-btn p{
     margin-top: 20px;
     font-weight: 400;
-    font-size: 1.1rem;
-    line-height: 30px;
+    font-size: 1.3rem;
+    line-height: 55px;
     margin-left: 0;
 }
 .corousel-msg-btn button{
@@ -378,92 +310,102 @@ hr{
         /* INSIGHT BOXES SECTION  */
 
 .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     width: 100%;
-    height: 75vh;
-    margin-top: 20px;
-}
-
-.bookmark-icon{
-    width: 6.5%;
-    height: 5%;
-    border: 2px solid #fff;
-    border-radius: 50%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
     position: relative;
-    left: 91.5%;
-    top: 1.5%;
+    padding-bottom: 20px;
 }
 
-.bookmark-icon:hover{
-    border: 1px solid blue;
-}
-
-.bookmark-icon i{
-    color: #0d5ae0;
-}
-
-.info-bg-img1{
-    background: url(./src/images/two-women-coworkers-smiling_cq5dam.web.510.340);
-    background-size:contain;
-}
-.info-bg-img1:hover{
-    background: url(./src/images/two-women-coworkers-smiling_cq5dam.web.510.340);
-    background-size:auto;
-    cursor: pointer;
-}
-.info-bg-img2{
-    background: url(./src/images/three-coworkers-having-discussion_cq5dam.web.510.340);
-    background-size:contain;
-}
-.info-bg-img2:hover{
-    background: url(./src/images/three-coworkers-having-discussion_cq5dam.web.510.340);
-    background-size:auto;
-    cursor: pointer;
-}
-
-.info-bg-img3{
-    background: url(./src/images/office-person-sitting-with-diary_cq5dam.web.510.340);
-    background-size:contain;
-}
-.info-bg-img3:hover{
-    background: url(./src/images/office-person-sitting-with-diary_cq5dam.web.510.340);
-    background-size:auto;
-    cursor: pointer;
-}
-.info-box{
+.insight-main-box {
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+    top: -60px;
+    background-color: #ffff;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 31vw;
+    gap: 20px;
 }
 
-.info-box:hover .text-box h2{
-    text-decoration: underline;
+.insight-box {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 50%;
 }
 
-.text-box{
-    width: 29vw;
-    height: 34vh;
-    background-color: #fff;
-    margin-bottom: 15px;
-    margin-left: 3%;
+.inner-box {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    
 }
 
-.text-box h2{
-    margin-top: 36px;
-    margin-left: 15px;
+.i-box1 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.3s ease-out;
+}
+.i-box2 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: 0.3s ease-out;
+}
+.i-box3 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110%;
+    transition: 0.3s ease-out;
+}
+.i-box4 img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 110%;
+    transition: 0.3s ease-out;
+}
+
+.insight-info-box{
+    background-color: transparent;
+    width: 100%;
+    height: 50%;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.insight-info-box .i-info-box {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.i-info-box h4{
+    margin: 15px 0;
     font-size: 1.2rem;
 }
 
-.text-box h2 a{
-    color: black;
-}
-.text-box p{
-    margin-top: 17px;
-    margin-left: 15px;
+.i-info-box p {
     font-size: 1rem;
+}   
+
+.inner-box:hover img{
+    transform: scale(1.1);
+}
+
+.inner-box:hover .i-info-box{
+    text-decoration: underline;
 }
 
         /* INDUSTRIES SECTION  */
@@ -471,10 +413,20 @@ hr{
 .ind-section{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 70vh;
     padding-bottom: 18px;
     background-color: #f0f0f0 !important;
     margin-top: 35px;
+}
+
+.ind-outer-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
 }
 
 .ind-section h1{
@@ -483,7 +435,7 @@ hr{
     font-weight: 400;
     font-size: 2rem;
     color: #00358f;
-    margin-top: 25px;
+    margin-top: 20px;
 }
 
 .ind-container1{
@@ -491,15 +443,14 @@ hr{
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    height: 38vh;
-    margin-top: 20px;
+    height: 50%;
 }
 .ind-container2{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    height: 36vh;
+    height: 50%;
     margin-top: 20px;
 }
 
@@ -578,6 +529,8 @@ hr{
 
 .container-info-box{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     padding-bottom: 18px;
@@ -596,7 +549,7 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 100%;
+    width: 75%;
     margin-top: 20px;
 }
 .service-box{
@@ -605,12 +558,12 @@ hr{
     align-items: center;
     width: 23%;
     padding-bottom: 10px;
+    gap: 20px;
 }
 
 .service-box img{
-    width: 86%;
+    width: 80%;
     margin-top: 10px;
-    margin-bottom: 50px;
     border-radius: 50%;
 }
 
@@ -642,7 +595,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 67vh;
+    height: 50vh;
     margin-top: 20px;
     color: #fff;
 }
@@ -721,11 +674,18 @@ hr{
 
 .home-banner2-section{
     display: flex;
-    background-image: url(./src/images/banner\ 2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 77vh;
+    height: 50vh;
     margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-banner2-section img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
 }
 
 .home-banner2-section:hover .read-link{
@@ -734,12 +694,17 @@ hr{
 }
 
 .banner2-msg-btn{
+    width: 50%;
+    background-color: rgba(0, 0, 255, 0.287);
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin-left: 20px;
     justify-content: center;   
     color: #fff;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 20px -1px 20px 20px rgba(0, 0, 255, 0.287);
+    padding-left: 10%;
 }
 
 .banner2-msg-btn h1{
@@ -929,3 +894,85 @@ footer{
     cursor: pointer;
 }
 
+
+
+/*=============================================
+            RESPONSIVE CODES
+=============================================*/
+
+@media (max-width:69em){
+
+    .search-icon,.world-icon{
+        display: none;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0;
+    }
+
+    header .kpmg-logo{
+        height: 39px;
+        min-width: auto;
+        margin-top: 0.4rem;
+    }
+
+    .mob-tab-navbar{
+        display: block;
+        padding: 0.6rem 0 0 1.17rem;
+        font-size: 1.7rem;
+        z-index: 999;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: left;
+        align-items:center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        /* to get transformation animation  */
+
+        transform:translateY(-100%);
+        transition:all 0.5s linear;
+    }
+    
+    .navbar-list{
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .navbar-links{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    header .link-icon-container{
+        font-size: 2rem;
+        padding: 0.5rem 2.8rem 0 0;
+    }
+
+    .active .navbar{
+        transform:translate(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mob-tab-navbar .mob-tab-can-icon{
+        display: block;
+    }
+
+    .active .mob-tab-navbar .mob-tab-nav-icon{
+        display: none;
+    }
+    
+}
